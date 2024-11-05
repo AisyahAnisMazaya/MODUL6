@@ -1,0 +1,26 @@
+package main
+
+import "fmt"
+
+func bilanganGanjil(n int) {
+	if n <= 1 {
+		return
+	}
+	if n%2 == 1 {
+		fmt.Print(n, " ")
+	}
+	bilanganGanjil(n - 2)
+}
+
+func main() {
+	var n int
+	fmt.Print("Masukkan nilai N: ")
+	fmt.Scan(&n)
+	fmt.Print("Bilangan ganjil adalah: ")
+	if n%2 == 1 {
+		bilanganGanjil(n)
+	} else {
+		bilanganGanjil(n - 1)
+	}
+	fmt.Println()
+}

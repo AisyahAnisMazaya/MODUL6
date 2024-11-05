@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func printStars(baris, n int) {
+	if baris > n {
+		return
+	}
+	for i := 1; i <= baris; i++ {
+		fmt.Print("*")
+	}
+	fmt.Println()
+	printStars(baris+1, n)
+}
+
+func main() {
+	var n int
+	fmt.Print("Masukkan jumlah baris: ")
+	fmt.Scan(&n)
+	printStars(1, n)
+}

@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func rekursifSequence(n int) {
+	if n == 1 {
+		fmt.Print(n, " ")
+		return
+	}
+	fmt.Print(n, " ")
+	rekursifSequence(n - 1)
+	fmt.Print(n, " ")
+}
+
+func main() {
+	var n int
+	fmt.Print("Masukkan bilangan: ")
+	fmt.Scan(&n)
+	rekursifSequence(n)
+	fmt.Println()
+}
